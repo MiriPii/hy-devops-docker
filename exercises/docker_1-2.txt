@@ -1,0 +1,9 @@
+> docker ps -as
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES               SIZE
+
+
+> docker images
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               latest              6678c7c2e56c        2 weeks ago         127MB
