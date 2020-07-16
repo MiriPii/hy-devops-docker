@@ -1,0 +1,12 @@
+> docker run -d --rm -it --name bash_exec devopsdockeruh/exec_bash_exercise
+
+> docker exec -it bash_exec bash
+
+root@24d57758bbfb:/usr/app# tail -f ./logs.txt
+
+Thu, 16 Jul 2020 16:52:35 GMT
+Thu, 16 Jul 2020 16:52:38 GMT
+Thu, 16 Jul 2020 16:52:41 GMT
+Thu, 16 Jul 2020 16:52:44 GMT
+Secret message is:
+"Docker is easy"

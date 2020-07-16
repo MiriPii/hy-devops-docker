@@ -1,0 +1,31 @@
+> docker run -it --rm --name web_echo ubuntu:16.04 sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+Input website:
+helsinki.fi
+Searching..
+sh: 1: curl: not found
+
+> docker run -it --rm --name web_echo ubuntu:16.04 sh -c 'apt-get update; apt install curl -y; echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+Get:1 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+.
+.
+.
+Setting up curl (7.47.0-1ubuntu2.15) ...
+Processing triggers for libc-bin (2.23-0ubuntu11) ...
+Processing triggers for ca-certificates (20190110~16.04.1) ...
+Updating certificates in /etc/ssl/certs...
+127 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
