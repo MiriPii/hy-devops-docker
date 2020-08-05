@@ -1,1 +1,6 @@
-> docker run --rm -d -p 8000:8000 -v $(pwd)/logs.txt:/usr/src/app/logs.txt first_node_backend
+The 'Dockerfile' for front/backend in their respective directory
+
+> docker build -t hy_node_backend backend-example-docker
+> docker build -t hy_node_front frontend-example-docker
+> docker run --rm -d -p 5000:5000 hy_node_front
+> docker run --rm -d -p 8000:8000 hy_node_backend
