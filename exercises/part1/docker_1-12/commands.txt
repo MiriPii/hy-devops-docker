@@ -1,0 +1,1 @@
+> docker run --rm -d -p 8000:8000 -v $(pwd)/logs.txt:/usr/src/app/logs.txt first_node_backend
