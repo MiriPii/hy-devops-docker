@@ -1,0 +1,1 @@
+> docker run -d -p 32987:80 --rm devopsdockeruh/ports_exercise
