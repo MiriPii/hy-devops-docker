@@ -1,0 +1,4 @@
+Requires https://github.com/docker-hy/spring-example-project to be downloaded in this folder.
+
+> docker build -t hy_java .
+> docker run --rm -d -p 8080:8080 hy_java
