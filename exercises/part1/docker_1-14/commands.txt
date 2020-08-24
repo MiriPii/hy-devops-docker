@@ -1,0 +1,5 @@
+# Requires https://github.com/docker-hy/rails-example-project in this folder
+# Tips for rails dockerfile from https://docs.docker.com/compose/rails/
+
+> docker build -t hy_rails .
+> docker run -it -p 3000:3000 hy_rails
