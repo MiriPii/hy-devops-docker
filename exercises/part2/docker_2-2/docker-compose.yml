@@ -3,6 +3,7 @@ version: '3.5'
 
 services:
   ex22:
-    image: devopsdockeruh/ports_exercise
+    image: devopsdockeruh/simple-web-service
+    command: server
     ports:
-      - "80:80"
+      - 8080:8080
