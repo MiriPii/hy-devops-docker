@@ -2,5 +2,15 @@
 version: '3.5'
 
 services:
-  backend:
-    build: ./backend
+  hy-frontend:
+    build: ./example-frontend
+    ports:
+      - 5000:5000
+    environment:
+      - PORT=5000
+      - REACT_APP_BACKEND_URL=http://hy-backend:8080
+  hy-backend:
+    build: ./example-backend
+    environment:
+      - PORT=8080
+      - REQUEST_ORIGIN=http://hy-frontend:5000

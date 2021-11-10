@@ -7,7 +7,8 @@ RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app
 
 WORKDIR /opt/app
 COPY . /opt/app
+#ENV PORT=5000
 EXPOSE 5000
-ENV API_URL=http://localhost:8000/
+#ENV REACT_APP_BACKEND_URL=http://localhost:8080/
 ENTRYPOINT [ "npm" ]
 CMD [ "start" ]

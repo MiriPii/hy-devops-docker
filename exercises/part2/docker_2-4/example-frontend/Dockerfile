@@ -7,8 +7,8 @@ RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app
 
 WORKDIR /opt/app
 COPY . /opt/app
-
-RUN touch /opt/app/logs.txt
-EXPOSE 8000
-ENV FRONT_URL=http://localhost:5000
-CMD [ "npm", "start" ]
+ENV PORT=5000
+EXPOSE 5000
+ENV REACT_APP_BACKEND_URL=http://localhost:8080/
+ENTRYPOINT [ "npm" ]
+CMD [ "start" ]

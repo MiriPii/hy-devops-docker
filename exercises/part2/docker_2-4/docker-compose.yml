@@ -1,0 +1,12 @@
+---
+version: '3.5'
+
+services:
+  hy-frontend:
+    build: ./example-frontend
+    ports:
+      - 5000:5000
+  hy-backend:
+    build: ./example-backend
+    ports:
+      - 8080:8080
